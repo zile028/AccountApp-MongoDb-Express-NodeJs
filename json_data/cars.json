@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Audi",
+    "price": 42000,
+    "used": false
+  },
+  {
+    "name": "Skoda",
+    "price": 22000,
+    "used": true
+  },
+  {
+    "name": "Volvo",
+    "price": 28000,
+    "used": false
+  }
+]

@@ -1,0 +1,26 @@
+<%- include ("partials/head.ejs") %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-10 offset-1">
+            <h3>Edit Accounts</h3>
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <form action="/save/edit" method="post">
+                        <input type="hidden" name="id" value="<%= acc._id %>">
+                        <input class="form-control mb-2" type="text" name="first_name" placeholder="First_name"
+                               value="<%= acc.first_name %>">
+                        <input class="form-control mb-2" type="text" name="last_name" placeholder="Last_name"
+                               value="<%= acc.last_name %>">
+                        <input class="form-control mb-2" type="email" name="email" placeholder="Email"
+                               value="<%= acc.email %>">
+                        <input class="form-control mb-2" type="text" name="phone" placeholder="Phone"
+                               value="<%= acc.phone %>">
+                        <button class="form-control btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include ("partials/bottom.ejs") %>

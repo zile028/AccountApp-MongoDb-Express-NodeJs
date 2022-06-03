@@ -1,0 +1,39 @@
+<%- include ("partials/head.ejs") %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-10 offset-1">
+            <h3>Edit Accounts</h3>
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <% data.forEach(el=>{ %>
+                            <tr>
+                                <td><%= el.first_name %></td>
+                                <td><%= el.last_name %></td>
+                                <td><%= el.email %></td>
+                                <td><%= el.phone %></td>
+                                <td><a href="/edit/<%= el._id %>" class="btn btn-warning">Edit</a></td>
+                                <td><a href="/delete/acc/<%= el._id %>" class="btn btn-danger">Delete</a></td>
+                            </tr>
+                        <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ("partials/bottom.ejs") %>
